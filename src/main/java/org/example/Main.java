@@ -1,7 +1,15 @@
 package org.example;
 
+import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
+
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    public static void main(String[] args) throws Exception {
+       var api = new TelegramBotsApi(DefaultBotSession.class);
+       api.registerBot(new MyBot());
     }
 }
+
+//java27072024_bot
+//7373536097:AAHJvcIAeazkKzAjYy6a_OsJpW1XxNo-XuA
